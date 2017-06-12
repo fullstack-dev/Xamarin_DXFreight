@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:background="#515966"
+    android:id="@+id/session_info_view">
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:text="NX Framework Session Id" />
+    <TextView
+        android:id="@+id/session_id"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:textSize="40dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:text="ABC  111"
+        local:MvxBind="Text Session_id" />
+</LinearLayout>

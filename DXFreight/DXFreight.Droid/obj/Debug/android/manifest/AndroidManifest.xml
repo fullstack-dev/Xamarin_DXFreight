@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.companyname.DXFreight" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="23" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-feature android:name="android.hardware.camera" />
+  <uses-feature android:name="android.hardware.camera.autofocus" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="@string/ApplicationName" android:theme="@style/MyTheme" android:name="md5a361555c010f904be030f3b24cacb86e.MainApplication" android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:debuggable="true">
+    <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:icon="@mipmap/ic_launcher" android:label="DX ISP" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="md5a361555c010f904be030f3b24cacb86e.SplashScreen">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="View for ActivationViewModel" android:noHistory="true" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.ActivationView" />
+    <activity android:label="View for ConsignmentDetailViewModel" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.ConsignmentDetailView" />
+    <activity android:label="View for LoginViewModel" android:noHistory="true" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.ConsignmentSummaryView" />
+    <activity android:label="View for LoginViewModel" android:noHistory="true" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.LoginView" />
+    <activity android:label="View for SessionInfoViewModel" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.SessionInfoView" />
+    <activity android:label="View for SOTIViewModel" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.SOTIView" />
+    <activity android:label="View for SplashViewModel" android:screenOrientation="portrait" android:name="md5bfe8677eb29783f6d22234cdc43914aa.SplashView" />
+    <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="md5ef9f064d53649f8127c2c8b1447b0176.ZxingActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.DXFreight.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.DXFreight" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>

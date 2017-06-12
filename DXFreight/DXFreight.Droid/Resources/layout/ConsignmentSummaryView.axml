@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/consignmentsummaryview">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#515966">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/logo" />
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:text="Round Summary"
+                    android:textColor="@android:color/white"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    local:MvxBind="Text ConsignmentinfoText" />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <ImageButton
+                        android:id="@+id/popupButton"
+                        android:layout_height="48dp"
+                        android:layout_width="48dp"
+                        android:src="@drawable/more"
+                        android:gravity="center"
+                        android:background="#515966" />
+                </LinearLayout>         
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:background="#2f3541">
+                <EditText
+                    android:id="@+id/inputSearch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:background="@drawable/edittextrounded"
+                    android:drawableLeft="@mipmap/ic_search_black_24dp"
+                    local:MvxBind="Text SearchString" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="17"
+                android:gravity="left">
+                <Mvx.MvxListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listView"
+                    android:background="#F2F2F2"
+                    android:divider="#101010"
+                    android:dividerHeight="1dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="20dp"
+            local:backgroundTint="#f1593a"
+            android:src="@drawable/cross"
+            local:MvxBind="Click CancelCommand"
+            local:borderWidth="0dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            local:backgroundTint="#009e11"
+            android:src="@drawable/link"
+            local:MvxBind="Click LinkCommand"
+            local:borderWidth="0dp" />
+    </FrameLayout>
+</LinearLayout>

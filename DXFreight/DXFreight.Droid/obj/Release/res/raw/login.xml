@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" ?>
+<device>
+  <roundno>999</roundno>
+  <depotno>99</depotno>
+  <driverid>90000001</driverid>
+  <contactname>hakim</contactname>
+  <imei>351559073377236</imei>
+  <mobileno />
+  <version>V1.0</version>
+  <sotiDeviceID>50006F0063006B0065007400500043000000-434E37302D3835323132343230333100</sotiDeviceID>
+  <sotiDeviceName>DXF00021A ROUND 119</sotiDeviceName>
+  <driverLoginTime>2017-03-13T10:14:42.612</driverLoginTime>
+  <driverLoginName>hakim</driverLoginName>
+  <Latitude>52.5860542833333</Latitude>
+  <Longitude>-0.2056132</Longitude>
+  <StatusDate>2017-03-14T09:34:45.4480000</StatusDate>
+</device>
